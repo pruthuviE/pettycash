@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <nb-card>
+      <nb-card-header>Add Petty Cash</nb-card-header>
+      <nb-card-body>
+        <form class="form-horizontal">
+          <div class="form-group row">
+            <label for="employeeId" class="label col-sm-3 form-control-label">Employee ID</label>
+            <div class="col-sm-9">
+              <input type="fname" name="employeeId"  [(ngModel)]="pettyCash.employeeId" nbInput fullWidth id="employeeId" placeholder="Employee ID">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="employeeName" class="label col-sm-3 form-control-label">Employee Name</label>
+            <div class="col-sm-9">
+              <input type="lname" name="employeeName" [(ngModel)]="pettyCash.employeeName" nbInput fullWidth id="employeeName" placeholder="Employee Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="reason" class="label col-sm-3 form-control-label">Reason</label>
+            <div class="col-sm-9">
+              <input type="address" name="Reason" [(ngModel)]="pettyCash.reason" nbInput fullWidth id="reason" placeholder="Reason">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="amount" class="label col-sm-3 form-control-label">Amount</label>
+            <div class="col-sm-9">
+              <input type="phone" name="Amount" [(ngModel)]="pettyCash.amount" nbInput fullWidth id="amount" placeholder="Amount">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="date" class="label col-sm-3 form-control-label">Date</label>
+            <div class="col-sm-9">
+              <input id="date" name="date" [(ngModel)]="pettyCash.date" nbInput placeholder="Pick Date" type="date">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3 offset-md-3">
+              <button nbButton hero status="success" (click)='onSubmit()' >Submit</button>
+            </div>
+            <div class="col-md-3 offset-md-3">
+              <button nbButton hero status="warning" (click)='onCancel()'>Cancel</button>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

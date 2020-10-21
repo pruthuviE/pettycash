@@ -1,0 +1,24 @@
+<div class="row d-flex justify-content-center">
+  <nb-card>
+    <nb-card-body>
+      <div class="row mb-4 mt-2 mr-2 justify-content-end">
+        <form action="">
+          <div class="form-group row">
+            <div class="col-md-3 offset-md-3">
+              <label for="date" class="label col-sm-3 form-control-label">Date</label>
+              <div class="col-sm-9">
+                <input id="date" name="date" [(ngModel)]="date" nbInput placeholder="Pick Date" type="date" required="true">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 offset-md-3">
+            <button nbButton hero status="success" (click)='onSubmit()'>Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="row m-2">
+        <ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>
